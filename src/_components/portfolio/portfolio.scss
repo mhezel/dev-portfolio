@@ -1,0 +1,104 @@
+.portfolio{
+    position: relative;
+
+    .progress{
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-top: 50px;
+        text-align: center;
+        color: orange;
+        font-size: 36px;
+
+        .progressBar{
+            height: 10px;
+            background-color: white;
+        }
+
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .wrapper {
+            position: relative;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+            &::before {
+              align-items: center;
+              justify-content: center;
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-size: cover;
+              background-position: center;
+              opacity: 0.4; // Adjust this value to set the opacity
+              z-index: -1; // Ensure it is behind the content
+              filter: blur(2px); // Blur effect
+            }
+        
+
+        .imageContainer{
+            flex: 1;
+            z-index: 1;
+            padding: 40px;
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+        }
+      
+
+        .textContainer{
+            flex: 1;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 40px;
+
+            h2{
+                font-size: 72px;
+            }
+            
+            p{
+                color: #fff;
+                font-size: 20px;
+            }
+
+            .buttonPortfolio{
+                display: flex;
+                gap: 20px;
+
+                
+                button{
+                    color: orange;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 10px;
+                    width: 200px;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+    }
+    }
+}
